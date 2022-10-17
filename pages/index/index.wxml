@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="list-header">
+        <text>课程列表</text>
+        <switch checked="{{ isHighlight }}" bindchange="onHightlightChange"></switch>
+    </view>
+    <view class="list-group">
+        <view class="list-group-item" wx:for="{{ classes }}" wx:key="index">
+            <view class="header">
+                <text class="{{ isOrange && item.price < 7500 ? 'orange' :'' }}">{{ item.name }}</text>
+                <text class="price">{{ item.price / 100 }} 元</text>
+            </view>
+            <text class="desc">{{ item.description }}</text>
+        </view>
+    </view>
+    <view class="{{ isVisible ? 'pagination' : 'invisible' }}">总页数 {{ totalPage }}  当前页数 {{ curPage }}</view>
+    <picker class="picker" value="{{ pageSize }}" range="{{ pageSizeArray }}" bindchange="onPageSizeChange">
+        每页 {{ pageSize }} 条数据
+    </picker>
+    <view wx:if="{{totalPage == 5 | 10 | 20}}">
+        <button disabled = "{{curPage == 1}}" bindtap="onPrevTap">上一页</button>
+        <button disabled = "{{curPage == totalPage}}" bindtap="onNextTap">下一页</button>
+    </view>
+</view>

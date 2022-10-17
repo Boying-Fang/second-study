@@ -1,0 +1,65 @@
+/**index.wxss**/
+.list-header {
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #212529;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.list-group-item {
+    padding: 0.5rem 1rem;
+    color: #212529;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.list-group-item .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-group-item .title {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.list-group-item .price {
+    font-size: 0.875rem;
+    width: 50px;
+    text-align: end;
+}
+.list-group-item .desc {
+    margin-bottom: 0.25rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.pagination {
+    text-align: center;
+    padding: 0.5rem 0;
+    color: #aaa;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.picker {
+    padding: 0.5rem 1rem;
+    color: #212529;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.orange{
+    color:#ffc107;
+}
