@@ -22,3 +22,4 @@
         <button disabled = "{{curPage == totalPage}}" bindtap="onNextTap">下一页</button>
     </view>
 </view>
+<!--changed-->
